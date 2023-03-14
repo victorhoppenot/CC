@@ -41,6 +41,11 @@ function setValueBundle(direction, color, value)
     end
 end
 
+Output = {}
+Output.__index = Output
+Input = {}
+Input.__index = Input
+
 function Output:new(direction, color, onValue)
     local self = {}
     setmetatable(self, Output)
