@@ -54,6 +54,7 @@ function Output:new(direction, color, onValue)
     self.onValue = onValue
     self.value = false -- default to off
     setValueBundle(self.direction, self.color, not self.onValue)
+    return self
 end
 
 function Output:on()
@@ -89,6 +90,7 @@ function Input:new(direction, color)
     setmetatable(self, Input)
     self.direction = direction
     self.color = color
+    return self
 end
 
 function Input:isOn()
